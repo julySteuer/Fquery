@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <Antlr4 Include="grammar/FqueryQl.g4">
+            <Visitor>true</Visitor>
+            <Error>false</Error>
+            <Listener>true</Listener>
+        </Antlr4>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Antlr4.Runtime.Standard" Version="4.13.1" />
+      <PackageReference Include="Antlr4BuildTasks" Version="12.14.0" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="11.0.0-rc.3.26522.148" />
+      <PackageReference Include="System.CommandLine" Version="3.0.0-rc.3.26522.148" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="obj\" />
+    </ItemGroup>
+
+</Project>
